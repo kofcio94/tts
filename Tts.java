@@ -1,10 +1,7 @@
 package *;
 
 import android.speech.tts.TextToSpeech;
-
-import com.supermemo.uiContainer.ui.webAppContainer.BaseActivity;
-import com.supermemo.uiContainer.utils.Logs;
-
+//fill empty imports
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
@@ -18,7 +15,7 @@ import java.util.Map;
 import javax.inject.Inject;
 
 /**
- * Class prepared for SuperMemo hybrid application to bind everywhere with @Inject annotation and
+ * Class prepared to bind everywhere with @Inject annotation and
  * generate speech from given (String) text and language (String eg. "bn_BD" or Locale)
  * <b>public</b> methods:
  * Tts(),
@@ -85,7 +82,7 @@ public class Tts {
         Locale locale = convertStringToLocale(language);
 
         if (locale != null && isLanguageAvailable(locale)) {
-            Logs.d(TAG, "language set: " + locale.toString());
+            Log.d(TAG, "language set: " + locale.toString());
             textToSpeech.setLanguage(locale);
         }
     }
@@ -95,7 +92,7 @@ public class Tts {
      */
     private void setSpeechLanguage(Locale locale) {
         if (locale != null && isLanguageAvailable(locale)) {
-            Logs.d(TAG, "language set: " + locale.toString());
+            Log.d(TAG, "language set: " + locale.toString());
             textToSpeech.setLanguage(locale);
         }
     }
